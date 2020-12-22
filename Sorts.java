@@ -28,4 +28,16 @@ public class Sorts{
       data[i] = result;
     }
   }
+  public static void insertionSort(int[] data){
+    int n = data.length;
+    for (int i = 1; i < n; i++) {
+        int current = data[i];
+        int prev = i - 1;
+        while ((prev >= 0) && (data[prev] > current )) {
+            data[prev+1] = data[prev];
+            prev -= 1;
+        }
+        data[prev+1] = current;
+    }
+  }
 }
