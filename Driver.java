@@ -12,14 +12,23 @@ public class Driver{
 
       //overhead: 1 random array generation.
       if(args.length < 3 || args[2].equals("random")){
-	      for (int i = 0; i < args.length; i++){
-
+        for (int i = 0; i < randData.length; i++){
+          randData[i] = (int)(Math.random() * 10000);
         }
       }else if(args[2].equals("equal")){
-	      System.out.println("REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        double equalValue = Math.random() * 10000;
+        for (int i = 0; i < randData.length; i++){
+          randData[i] = (int)(equalValue);
+        }
       }else if(args[2].equals("sorted")){
+        for (int i = 0; i < randData.length; i++){
+          randData[i] = (int)(Math.random() * 10000);
+        }
 	      Arrays.sort(randData);
       }else if(args[2].equals("reversed")){
+        for (int i = 0; i < randData.length; i++){
+          randData[i] = (int)(Math.random() * 10000);
+        }
 	      Arrays.sort(randData);
 	       for (int i = 0; i < randData.length / 2; i++){
            int swap = randData[i];
